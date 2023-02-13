@@ -1,0 +1,20 @@
+body{margin:2rem;padding:2rem}
+
+#mytable {
+    width: 100%;
+    border-collapse: collapse;
+}
+#mytable th {
+    text-align: left;
+    padding: 8px;
+    border: 2px solid #000000;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+ td, th {
+    border: 1px solid black;
+    padding: 20px;
+    text-align: left;
+}
