@@ -6,9 +6,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Project PHP</title>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-
 </head>
-
 <body>
 <h1 style="text-align: center;margin: 0rem 2rem 2rem 0rem">Task</h1>
 <button id="openModalButton" style="margin: 0 0 1rem 0;background-color: lightseagreen;font-family: Ebrima">Open Modal
@@ -21,7 +19,6 @@
             <div id="closeModalButton">Click outside the Modal to close it</div>
         </div>
         <div class="modal-body">
-
             <img id="imagePreview" class="image-preview" alt="">
             <br>
             <input type="file" id="imageInput" accept="image/*">
@@ -60,9 +57,7 @@ if ($err) {
     $data = json_decode($response, true);
     $access_token = $data['oauth']['access_token'];
 }
-
 // Request the data from the API
-
 $curl = curl_init();
 curl_setopt_array($curl, [
     CURLOPT_URL => "https://api.baubuddy.de/dev/index.php/v1/tasks/select",
@@ -85,7 +80,6 @@ if ($err) {
     $data = json_decode($response, true);
 }
 // Display the data in a table
-
 echo "<table border='1' id='mytable' style='border:2rem'>";
 echo "<tr>";
 echo "<th style='background-color: lightseagreen'>Task</th>";
@@ -158,12 +152,10 @@ foreach ($data as $row) {
     openModalButton.addEventListener("click", function () {
         modal.style.display = "block";
     });
-
     // When the select image button is clicked, open the file selector
     selectImageButton.addEventListener("click", function () {
         imageInput.click();
     });
-
     // When a file is selected, display the preview
     imageInput.addEventListener("change", function () {
         var reader = new FileReader();
@@ -174,13 +166,11 @@ foreach ($data as $row) {
     });
     // Get the close modal button
     var closeModalButton = document.getElementById("closeModalButton");
-
     // When the close modal button is clicked, close the modal
     closeModalButton.addEventListener("click", function () {
         modal.style.display = "none";
         imagePreview.src = "";
     });
-
     // Close the modal when the user clicks outside of it
     window.addEventListener("click", function (event) {
         if (event.target === modal) {
@@ -222,5 +212,4 @@ foreach ($data as $row) {
     });
 </script>
 </body>
-
 </html>
