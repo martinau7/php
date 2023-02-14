@@ -16,7 +16,7 @@
     <div class="modal-content">
         <div class="modal-header">
             <h2>Select an Image</h2>
-            <div id="closeModalButton">Click outside the Modal to close it</div>
+            <button id="closeModalButton">Close</button>
         </div>
         <div class="modal-body">
             <img id="imagePreview" class="image-preview" alt="">
@@ -28,7 +28,6 @@
         </div>
     </div>
 </div>
-
 <h5 style="margin: 0 0 1rem 0">Search table</h5>
 <input type="text" id="searchInput" onkeyup="searchTable()" style="margin: 0 0 1rem 0;width: 40rem">
 <?php
@@ -93,7 +92,6 @@ foreach ($data as $row) {
     echo "<td>" . $row['title'] . "</td>";
     echo "<td>" . $row['description'] . "</td>";
     echo "<td style='background-color:" . $row['colorCode'] . ";'>" . $row['colorCode'] . "</td>";
-    // Row 229 changes the background color to the color code mentioned in the table row colorCode
 }
 ?>
 <script>
