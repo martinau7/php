@@ -133,19 +133,14 @@ foreach ($data as $row) {
 <script>
     // Get the modal
     var modal = document.getElementById("modal");
-
     // Get the open modal button
     var openModalButton = document.getElementById("openModalButton");
-
     // Get the image input
     var imageInput = document.getElementById("imageInput");
-
     // Get the select image button
     var selectImageButton = document.getElementById("selectImageButton");
-
     // Get the image preview
     var imagePreview = document.getElementById("imagePreview");
-
     // When the open modal button is clicked, show the modal
     openModalButton.addEventListener("click", function () {
         modal.style.display = "block";
